@@ -1,0 +1,62 @@
+/**
+* Cette classe represente une intersection, libre ou occupee par un pion
+*
+* @author Marina Montfort et Gilles Lacemon
+*@version 1.0
+*/
+
+package jeu;
+
+public class Intersection {
+
+	private Pion pion = null; //une intersection est nulle au depart
+	private boolean accesDiagonal = false;
+	
+
+/** methode qui permet de savoir si une intersection est libre ou occupee par un pion
+@ return true si l'intersection est libre ou false dans le cas contraire
+*/
+	public boolean estLibre() {
+		return pion == null;
+	}
+	
+
+/** selecteur qui permet de connaitre les intersections accessibles en diagonal
+@return le pion situe sur l'intersection
+*/
+	public boolean getAccesDiagonal() {
+		return accesDiagonal;
+	}
+	
+
+
+/** selecteur qui permet d'acceder au pion situe sur une intersection donnee
+@return le pion situe sur l'intersection
+*/
+	public Pion getPion() {
+		return pion;
+	}
+	
+
+/** modifieur qui permet de definir les intersections qui sont accessibles par un deplacement diagonal
+*/
+	public void setAccesDiagonal(boolean accesDiagonal) {
+		this.accesDiagonal = accesDiagonal;
+	}
+	
+/** modifieur qui permet de mettre un pion sur une intersection
+*/
+	public void setPion(Pion pion) {
+		this.pion = pion;
+	}
+	
+
+
+	public String toString() {
+		if (this.pion instanceof Chevre)
+			return "C"; // si le pion est de type chevre, on affiche un T
+		if (this.pion instanceof Tigre)
+			return "T"; //si le pion est de type tigre, on afiche un C 
+		return "+"; 
+	}
+}
