@@ -6,5 +6,13 @@ L'équipe de développement était composé de:
 -LACEMON Gilles
 -MONTFORT Marina
 
+Pour compiler:
+cd chemin/vers/BaghChal/
+javac -d bin/ -cp src/ src/TestJeu.java
+
+Pour jouer:
+cd chemin/vers/BaghChal/
+java -cp bin TestJeu
+
 
 University of Nantes: http://www.univ-nantes.fr/
